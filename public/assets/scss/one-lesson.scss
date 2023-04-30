@@ -1,0 +1,119 @@
+.lesson{
+    padding: 50px 0px 100px 0px;
+    color: #1D1D39;
+
+    .lesson-title{
+        margin-top: 50px;
+        margin-bottom: 40px;
+        h2{
+            font-size: 48px;
+            font-weight: 700;
+        }
+       
+    }
+
+    .lesson-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .subtitle{
+        font-size: 24px;
+        font-weight: 700;
+
+    }
+
+    .lesson__item{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .images{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        .image{
+            height: 180px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .comment{
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            textarea{
+                width: 100%;
+                height: 123px;
+                padding: 30px;
+                resize: none;
+                outline: none;
+                border-radius: 12px;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05), inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+                border: none;
+                font-size: 16px;
+                font-weight: 400;
+                color: #1D1D39;
+            }
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        .lesson-title{
+            h2{
+                font-size: 32px !important;
+
+            }
+        }
+
+        .subtitle{
+            font-size: 22px;
+        }
+    }
+}
+
+.lesson-names{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 0px 12px 12px 0px;
+    width: 270px;
+    position: fixed;
+    left: 0;
+    a{
+        display: block;
+        padding: 20px;
+        font-size: 16px;
+        font-weight: 600;
+
+        &.active{
+            background: #6C63FF;
+            color: white;
+        }
+
+        &.disabled{
+            background: #222222;
+            color: white;
+        }
+    }
+}
+
+@media screen and (max-width:1800px) {
+    .lesson-names{
+        position: relative;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        border-radius: 12px;
+    }
+}

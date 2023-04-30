@@ -1,0 +1,130 @@
+.one-course{
+    padding: 50px 0px 100px 0px;
+    color: #1D1D39;
+
+    .one-course__banner{
+        margin: 50px 0px;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
+        background: #7000AD;
+        border-radius: 12px;
+    }
+
+    .one-course__banner-info{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: white;
+
+        .one-course__name{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            h1{
+                font-size: 64px;
+                font-weight: 700;
+            }
+
+            .text{
+                font-size: 48px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .author{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .author__ava{
+            width: 90px;
+            height: 90px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 100px;
+            }
+        }
+
+        .author__name{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .name{
+                font-size: 24px;
+                font-weight: 700;
+            }
+
+            .post{
+                font-weight: 16px;
+            }
+        }
+    }
+
+    .one-course__nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .progress-bar{
+        margin: 50px 0px;
+    }
+
+    .one-course__wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    @media screen and (max-width:1050px) {
+        .one-course__banner-img{
+            display: none;
+        }
+
+        .one-course__banner{
+            padding: 50px;
+        }
+    }
+
+    @media screen and (max-width:670px) {
+        .one-course__name{
+            h1{
+                font-size: 32px !important; 
+            }
+
+            .text{
+                font-size: 24px !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .title-two{
+        .text{
+            h1{
+                font-size: 32px;
+            }
+
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}

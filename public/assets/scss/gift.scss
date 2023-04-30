@@ -1,0 +1,57 @@
+.gift{
+    color: #1D1D39;
+    padding: 50px 0px;
+    
+    .content{
+        padding: 280px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .congratulate{
+        font-size: 64px;
+        font-weight: 700;
+        color: #6C63FF;
+    }
+
+    p{
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .gift-wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .one{
+            background: #6C63FF;
+            width: 241px;
+        }
+
+        .two{
+            background: #FF22B0;
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        .content{
+            padding: 50px 0px;
+        }
+
+        .congratulate{
+            font-size: 32px;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    }
+}

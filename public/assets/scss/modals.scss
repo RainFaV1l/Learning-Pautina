@@ -1,0 +1,197 @@
+// Модальное окно "Не авторизован"
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    @include flex-center;
+    background-color: rgba($color: $dark, $alpha: 0.9);
+}
+
+.modal__container {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 40px;
+    @include gap-column(70px);
+}
+
+.auth-modal__container {
+    width: 590px;
+    height: 466px;
+}
+
+.modal__close {
+    align-self: flex-end;
+}
+
+.modal__content {
+    text-align: center;
+    @include gap-column(30px);
+    align-items: center
+}
+
+.modal__header {
+    @include gap-column(15px);
+}
+
+.modal__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: calc(59 / 48 * 100%);
+}
+
+.modal__subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+.auth-modal__subtitle {
+    max-width: 414px;
+}
+
+.modal__button {
+    @include button(18px, 60px, gradient);
+}
+
+// Модальное окно "Заявка на курс"
+
+.application-modal__container {
+    width: 650px;
+}
+
+.application-modal__subtitle {
+    max-width: 434px;
+}
+
+.application-modal__container {
+    padding: 40px 40px;
+}
+
+.modal__form {
+    @include gap-column(30px);
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 60px;
+}
+
+.modal__button {
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+}
+
+.modal__input {
+    @include input-null();
+    @include customInput(18px, 30px, 450px);
+}
+
+.modal__img {
+    width: 450px;
+    height: 300px;
+}
+
+.modal__img .add-course-form-img-content {
+    width: 450px;
+    height: 300px;
+}
+
+.modal__img .drag-img-styles {
+    height: 300px;
+}
+
+.modal__close {
+    svg path {
+        @include transition();
+    }
+    &:hover svg path {
+        fill: $blue;
+    }
+}
+
+// Модальное окно оценки
+
+    // Стили для рейтинга
+
+    .rating-area {
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .rating-area:not(:last-child) label {
+        margin-right: 20px
+    }
+
+    .rating-area input ~ label svg path {
+        @include transition();
+    }
+
+    .rating-area:not(:checked) input {
+        display: none;
+    }
+    .rating-area:not(:checked) label {
+        float: right;
+        padding: 0;
+        cursor: pointer;
+    }
+    .rating-area input:checked ~ label svg path {
+        fill: $yellow;
+        stroke: transparent;
+    }
+    .rating-area:not(:checked) label:hover svg path,
+    .rating-area:not(:checked) label:hover ~ label svg path {
+        fill: $yellow;
+        stroke: transparent;
+    }
+    .rating-area input:checked + label:hover svg path,
+    .rating-area input:checked + label:hover ~ label svg path,
+    .rating-area input:checked ~ label:hover svg path,
+    .rating-area input:checked ~ label:hover ~ label svg path,
+    .rating-area label:hover ~ input:checked ~ label svg path {
+        fill: $yellow;
+        stroke: transparent;
+    }
+    .rate-area > label:active {
+        position: relative;
+    }
+
+    // Стилм формы
+
+    .modal__textarea {
+        @include input-null();
+        @include customInput(30px, 30px, 450px);
+        height: 205px;
+    }
+
+//
+
+.edit-group-modal__container {
+    width: 650px;
+}
+
+.modal__select {
+    @include input-null();
+    @include customInput(18px, 30px, 450px);
+    @include styleSelect();
+    color: $dark !important;
+}
+
+.delete-modal__container {
+    width: 650px;
+    padding-bottom: 100px;
+}
+
+.delete-modal__subtitle {
+    width: 414px;
+}
+
+.delete-modal__no {
+    @include button(null, null, border);
+}
+
+.delete-modal__row {
+    @include flex-center();
+    gap: 30px;
+}
