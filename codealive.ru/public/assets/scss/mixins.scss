@@ -1,0 +1,165 @@
+// Mixin transition задает плавность анимациям
+@mixin transition {
+    transition: .3s ease-in-out;
+}
+
+// Mixin flex-center центрирует элемент
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Mixin gap-column добавляет свойство gap для колонки
+@mixin gap-column($gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+// Mixin gap-column добавляет свойство gap для столбца
+@mixin gap-row($gap) {
+    display: flex;
+    gap: $gap;
+}
+
+// Mixin button является универсальным видом кнопки с разными стилями
+@mixin button($padding-t-b, $padding-l-r, $type) {
+
+    @include transition();
+    @include flex-center();
+
+    font-weight: 500;
+
+    @if $type == 'gradient' {
+
+        color: #fff;
+        background: linear-gradient(135deg, #F8A4D8 0%, #6C63FF 100%);
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    @else if $type == 'border' {
+
+        color: #1D1D39;
+        background: transparent;
+        border: 1px solid #1D1D39;
+
+        &:hover {
+            background-color: #1D1D39;
+            color: #fff;
+        }
+
+    }
+    @else if $type == 'func' {
+
+        color: #fff;
+        background-color: #6C63FF;
+        border: 1px solid transparent;
+
+        &:hover {
+            background-color: transparent;
+            border-color: #1D1D39;
+            color: #1D1D39;
+        }
+
+    }
+
+    border-radius: 30px;
+    padding: $padding-t-b $padding-l-r;
+}
+
+// Mixin flex является кастомным flex элементом
+
+@mixin flex($d, $j, $a, $g, $w) {
+
+    display: flex;
+
+    @if $d == 'c' {flex-direction: column;}
+    @else if $type == 'r' {flex-direction: row;}
+    @else if $type == 'c-r' {flex-direction: column-reverse;}
+    @else if $type == 'r-r' {flex-direction: row-reverse;}
+
+    @if $j == 'c' {justify-content: center;}
+    @else if $j == 's-b' {justify-content: space-between;}
+    @else if $j == 's' {justify-content: flex-start;}
+    @else if $j == 'e' {justify-content: flex-end;}
+
+    @if $a == 'c' {align-items: center;}
+    @else if $j == 's' {align-items: flex-start;}
+    @else if $j == 'e' {align-items: flex-end;}
+
+    gap: $g;
+
+    @if $w == 'w' {flex-wrap: wrap;}
+    @else if $w == 'n' {flex-wrap:nowrap;}
+    @else if $w == 'w-r' {flex-wrap:wrap-reverse;}
+
+}
+
+// Обнуление input
+
+@mixin input-null() {
+    outline: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    border-radius: 7px;
+
+    &::placeholder {
+        @include transition();
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+}
+
+@mixin input-standart() {
+    font-weight: 500;
+    border: 1px solid rgba(29, 29, 57, 0.25);
+    border-radius: 7px;
+    font-size: 18px;
+    padding: 18px 30px;
+    background-color: #fff;
+    appearance: none;
+
+    &::placeholder {
+        color: rgba(29, 29, 57, 0.5);
+        @include transition();
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+
+    option:disabled {
+        color: rgba(29, 29, 57, 0.5);
+    }
+
+    &:focus {
+        border-color: $blue;
+    }
+}
+
+// Кастоимный input
+
+@mixin customInput($p-t-b, $p-l-r, $w) {
+    padding: $p-t-b $p-l-r;
+    width: $w;
+    border: 1px solid rgba($color: $dark, $alpha: 0.25);
+    font-weight: 500;
+    &:focus {
+        border-color: $blue;
+    }
+}
+
+@mixin styleSelect() {
+    appearance: none;
+    cursor: pointer;
+    background: url("../assets/img/line.svg") no-repeat;
+    background-position: center right 20px;
+    color: rgba(29, 29, 57, 0.5) !important;
+    font-weight: 500;
+}

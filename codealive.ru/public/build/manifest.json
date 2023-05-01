@@ -1,0 +1,28 @@
+{
+  "resources/fonts/Montserrat-Bold.ttf": {
+    "file": "assets/Montserrat-Bold-189aeb28.ttf",
+    "src": "resources/fonts/Montserrat-Bold.ttf"
+  },
+  "resources/fonts/Montserrat-SemiBold.ttf": {
+    "file": "assets/Montserrat-SemiBold-1418bd4d.ttf",
+    "src": "resources/fonts/Montserrat-SemiBold.ttf"
+  },
+  "resources/fonts/Montserrat-Regular.ttf": {
+    "file": "assets/Montserrat-Regular-dcfe8df2.ttf",
+    "src": "resources/fonts/Montserrat-Regular.ttf"
+  },
+  "resources/fonts/Montserrat-Medium.ttf": {
+    "file": "assets/Montserrat-Medium-20ebfd65.ttf",
+    "src": "resources/fonts/Montserrat-Medium.ttf"
+  },
+  "resources/scss/style.scss": {
+    "file": "assets/style-bc7cf69f.css",
+    "src": "resources/scss/style.scss",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-f25b4258.js",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}

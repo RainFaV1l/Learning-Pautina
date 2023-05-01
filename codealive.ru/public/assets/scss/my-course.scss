@@ -1,0 +1,21 @@
+.my-courses{
+    padding: 50px 0px 100px 0px;
+
+    .my-courses__nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+
+    .my-courses__wrapper{
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
